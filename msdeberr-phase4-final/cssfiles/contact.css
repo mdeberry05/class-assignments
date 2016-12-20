@@ -1,0 +1,14 @@
+@import url("styles.css");
+
+form {
+    color: #fff;
+    text-align: center;
+    
+}
+
+
+
+form h5 {
+    display: inline-block;
+    width: 12%;
+}

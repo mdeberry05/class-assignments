@@ -1,0 +1,15 @@
+@import url("styles.css");
+
+.collapsibleMenu, #listall
+{
+
+    text-align: center;
+}
+
+img
+{
+	border-radius: 20px;
+	height: 800px;
+	width: 1000px;
+}
+

@@ -1,0 +1,15 @@
+@import url("styles.css");
+
+h1,h2
+{
+	text-align:center;
+}
+
+
+
+      #map,#gmap {
+        height: 800px;
+        width: 1000px;
+       margin: 0 auto 0 auto;
+       border-radius: 20px;
+      }

@@ -1,0 +1,14 @@
+@import url("styles.css");
+#center
+{
+
+    text-align: center;
+}
+
+p 
+{
+    margin: 0 auto;
+    text-align: justify;
+    width: 30em;
+}
+

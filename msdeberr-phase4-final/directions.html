@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta name="charset" content="UTF-8">
+    <title> Iconic Nail Salon </title>
+    <link rel="stylesheet" type="text/css" href="cssfiles/directions.css">
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+        <header>
+            <h1>Iconic Nail Salon</h1>
+            <h2>Relax. You Deserve it.</h2>
+        </header>
+        <nav>
+            <ul class="main_menu">
+                <li><a href="home.php">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="directions.html">Directions</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="contact.php">Contact Us</a></li>
+            </ul>
+        </nav>
+    </div>
+
+<div id="gmap">
+  <h1>Iconic Nail Salon</h1>
+  <h2>We are located at the address below!</h2>
+      <div id="map"></div>
+      <script>
+
+// Functions and how to implement taken from https://developers.google.com/maps/documentation/javascript/examples/event-simple
+
+
+        function initMap() {
+          var mapDiv = document.getElementById('map');
+          var map = new google.maps.Map(mapDiv, {
+              center: {lat: 35.3053732, lng: -80.7309636},
+              zoom: 14
+          });
+ var marker = new google.maps.Marker({
+          position: {lat: 35.3053732, lng: -80.7309636},
+          map: map,
+          title: 'Iconic Nail Salon'
+        });
+
+
+
+ map.addListener('center_changed', function() {
+    // 5 seconds after the center of the map has changed, pan back to the
+    // marker.
+    window.setTimeout(function() {
+      map.panTo(marker.getPosition());
+    }, 5000);
+  });
+
+  marker.addListener('click', function() {
+    map.setZoom(8);
+    map.setCenter(marker.getPosition());
+
+  });
+
+
+        }
+    </script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBdVccYPN5MI5z1UZE0rbZtDjWROmuy8KE&callback=initMap">
+    </script>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <footer>
+       
+        <ul class="footer_menu">
+            <li><a href="home.php">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="directions.html">Directions</a></li>
+           <li><a href="aboutus.html">About Us</a></li>
+            <li><a href="contact.php">Contact Us</a></li>
+        </ul>
+    
+    </footer>
+</body>
+
+</html>
